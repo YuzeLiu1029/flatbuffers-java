@@ -45,6 +45,11 @@
             <artifactId>grpc-core</artifactId>
             <version>${gRPC.version}</version>
         </dependency>
+        <dependency>
+            <groupId>io.grpc</groupId>
+            <artifactId>grpc-stub</artifactId>
+            <version>${gRPC.version}</version>
+        </dependency>
     </dependencies>
     <build>
 

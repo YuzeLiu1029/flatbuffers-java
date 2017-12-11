@@ -13,7 +13,7 @@ import java.io.OutputStream;
 import java.nio.ByteBuffer;
 
 public class FlatbuffersUtils {
-    abstract public class FBExtactor  <T extends Table> {
+    abstract public static class FBExtactor  <T extends Table> {
         T extract (InputStream stream) throws IOException {
             if (stream instanceof KnownLength) {
                 int size = stream.available();
@@ -24,7 +24,7 @@ public class FlatbuffersUtils {
                 throw new RuntimeException("The class " + stream.getClass().getCanonicalName() + " does not extend from KnownLength ");
         }
 
-        abstract T extract (ByteBuffer buffer);
+        public abstract T extract(ByteBuffer buffer);
 
     }
 
