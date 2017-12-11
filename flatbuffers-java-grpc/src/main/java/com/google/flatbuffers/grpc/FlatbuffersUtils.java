@@ -77,7 +77,7 @@ public class FlatbuffersUtils {
 
     }
 
-    public static <T extends Table> MethodDescriptor.Marshaller<T> marshaller(final Class<T> clazz, final FBExtactor<T> extactor) {
+    public static <T extends Table> MethodDescriptor.Marshaller<T> marshaller(final Class<T> clazz, final FBExtactor<T> extractor) {
         return new MethodDescriptor.ReflectableMarshaller<T>() {
             @Override
             public Class<T> getMessageClass() {
@@ -92,7 +92,7 @@ public class FlatbuffersUtils {
             @Override
             public T parse(InputStream stream) {
                 try {
-                    return extactor.extract(stream);
+                    return extractor.extract(stream);
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }

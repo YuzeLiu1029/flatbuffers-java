@@ -106,6 +106,7 @@
         <module>flatbuffers-java</module>
         <module>flatbuffers-java-grpc</module>
         <module>example</module>
+        <module>example-grpc</module>
     </modules>
 
 </project>
