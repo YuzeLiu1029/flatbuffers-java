@@ -36,5 +36,6 @@ table MonsterRequest {
 }
 
 rpc_service MonsterSvc {
+  ///retrieve a monster by name
   ShowMonster(MonsterRequest):Monster;
 }
